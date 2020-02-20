@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+  <h2><u>Comments</u></h2>
+
+  <div class="center" *ngIf="posts">
+    <div class="row" *ngFor="let post of posts">
+      <div class="col" style="margin-bottom: 6%; ">
+
+        <h4 *ngIf="post.comments" (click)="viewPostHandler(post._id)"><b>{{post.title}}</b></h4>
+
+        <div *ngFor="let comment of comments">
+          <label *ngIf="comment.postID == post._id"><u><b
+                (click)="viewPostHandler(post._id)">{{comment.comment}}</b></u> by
+            {{comment.user}}<br>
+            <button (click)="deleteCommentHandler(comment._id)"
+              class="w3-button w3-white w3-border w3-border-red w3-round-large">Delete</button>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

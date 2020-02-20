@@ -1,0 +1,48 @@
+<div class="container-fluid rounded">
+  <div class="">
+    <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: xx-large;"><img
+        src="https://img.icons8.com/material-outlined/30/000000/post-stamp.png">&nbsp;Create Post</h3>
+    <hr>
+    <form [formGroup]="postCreationForm" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="title" style="font-family: 'Times New Roman', Times, serif; font-size: 22px; margin-top: 1%;"><img
+            src="https://img.icons8.com/windows/32/000000/title.png">&nbsp;Title :</label>
+        <input type="text" id="title" placeholder="" class="form-control" formControlName="title" name="title"
+          required />
+      </div>
+
+      <div>
+        <label for="title" style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><img
+            src="https://img.icons8.com/small/32/000000/image.png">&nbsp;Image :</label><br>
+        <input type="file" name="imgURL" formControlName="imgURL" accept="image/*" (change)="onChange($event)" />
+      </div>
+
+      <div class="form-group">
+        <br><label for="title" style="font-family: 'Times New Roman', Times, serif; font-size: 22px;"><img
+            src="https://img.icons8.com/windows/32/000000/document-body.png">&nbsp;Body :</label>
+        <textarea id="sub" name="sub" formControlName="body" placeholder="write something.." required ngModel
+          name="desc">
+        </textarea>
+
+        <!-- <input
+             type="password"
+             id="password"
+              class="form-control"
+              ngModel
+              name="password"
+              required > -->
+      </div>
+
+      <button type="submit" class="btn btn-primary" (click)="createHandler()" *ngIf="!enable">&nbsp;
+        <img src="https://img.icons8.com/office/30/000000/send.png">
+
+
+        Post Now!
+      </button>
+      <button type="submit" class="btn btn-primary" *ngIf="enable" (click)="updateHandler()">&nbsp;
+        <img src="https://img.icons8.com/material-sharp/30/000000/update-left-rotation.png">
+        Update Now!
+      </button>
+    </form>
+  </div>
+</div>

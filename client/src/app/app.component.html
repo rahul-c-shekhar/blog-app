@@ -1,0 +1,28 @@
+<!-- nav -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-collapse collapse">
+    <a class="nav-brand" routerLink="home"><img src="assets/logo.png" height="50" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <a class="navbar nav-brand" routerLink="home" style="color: aliceblue; font-size: xx-large; ">Blog
+      Application</a>
+
+    <a class=" navbar nav-item ml-auto " routerLink="home" style="color: aliceblue;"><i
+        class="material-icons">&#xe156;</i>Posts</a>
+
+    <a class="navbar nav-item " routerLink="comments" style="color: aliceblue;"><i style='font-size:24px'
+        class='far'>&#xf075;</i>&nbsp;&nbsp;Comments</a>
+
+    <a class="navbar nav-item" routerLink="stats" style="color: aliceblue;"><i style="font-size:24px"
+        class="fa">&#xf080;</i>&nbsp;Stats</a>
+
+    <a class="navbar nav-item" style="color: aliceblue;" (click)="logout()"><i
+        class="material-icons">&#xe0da;</i>&nbsp;Logout</a>
+
+
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

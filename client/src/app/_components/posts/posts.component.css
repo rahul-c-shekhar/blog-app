@@ -1,0 +1,28 @@
+textarea,
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+
+}
+
+.container-fluid {
+  margin-top: 150px;
+  width: 900px;
+  height: 550px;
+  background-color: ghostwhite;
+  padding: 20px;
+  align-items: center;
+}
+
+textarea {
+  width: 850px;
+  height: 200px;
+}
+
+h1 {
+
+  font-size: 40px;
+  text-align: center;
+
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}

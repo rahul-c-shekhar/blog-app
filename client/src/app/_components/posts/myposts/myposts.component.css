@@ -1,0 +1,43 @@
+h1 {
+
+  font-size: 40px;
+  text-align: center;
+
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.center {
+  margin-top: 2%;
+  /* align-content: center; */
+  width:44%;
+  margin-left: 25%;
+  border: 3px solid snow;
+  padding: 10px;
+ 
+}
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+ 
+}
+
+
+p {
+  font-size: x-large;
+  /* font-style: oblique; */
+  font-family: 'Times New Roman', Times, serif;
+  text-align: justify;
+}
+
+h3 {
+  margin-top: 4%;
+  font-size: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  
+  
+}
+img{
+  border: 3px solid black;
+}

@@ -1,0 +1,42 @@
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<h3 style="text-align: center; margin-top: 2%; font-size: 45px;font-family: 'Times New Roman', Times, serif;"><img src="https://img.icons8.com/dotty/80/000000/message-squared.png" style="width: 45px;">
+  <u>&nbsp;Posts</u></h3>
+
+<div class="center">
+  <div class="row">
+    <div class="col">
+      <div *ngIf="post">
+     
+        <h2> <u>{{post.title}}</u></h2>
+        <p style="color:SlateBlue;">{{post.user}}</p>
+        <img src='/assets/uploads/{{post.imgURL}}' height=" 500px" width="880px" style="border: 3px solid black; margin-left: 3%;">
+        <p><br>{{post.body}}</p><br>
+        <form [formGroup]="commentForm">
+          <h5>Comments</h5>
+          <div *ngFor="let comment of comments" style="margin-right: 3%;">
+            <label *ngIf="comment.postID == post._id" style="max-lines: 1;" ><b>{{comment.user}}</b> :
+              {{comment.comment}}<br><br>
+              <button *ngIf="comment.userID == userID"
+                (click)="updateCommentHandler(comment._id)"
+                 class="w3-btn w3-white w3-border w3-border-green w3-round-large display-right"  >
+                 Update</button>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button *ngIf="comment.userID==userID" (click)="deleteCommentHandler(comment._id)" 
+              class="w3-btn w3-white w3-border w3-border-green w3-round-large display-right"  >
+              Delete</button>
+            </label>
+          </div>
+          <input type="text" placeholder="Enter your comment here.." formControlName="comment"
+            style="height: 40px; width: 300px; margin-top: 2%; ">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button (click)="commentHandler(post.title, post._id)" 
+          class="w3-button w3-ripple w3-black" >Submit</button>
+          <alert></alert>
+        </form>
+      </div>
+    </div>
+
+  </div>

@@ -1,0 +1,29 @@
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  margin-top: 3%;
+}
+
+.center {
+  /* vertical-align: auto; */
+  /* align-self: center; */
+  margin-top: 5%;
+  /* align-content: center; */
+  width: 80%;
+  margin-left: 10%;
+  border: 3px solid darkgrey;
+  padding: 30px;
+
+
+}
+
+h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  color: #483D8B;
+}
+
+label {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}

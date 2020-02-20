@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<h3 style="text-align: center; margin-top: 2%; font-size: 45px;font-family: 'Times New Roman', Times, serif;"><img
+    src="https://img.icons8.com/dotty/80/000000/message-squared.png" style="width: 45px;">
+  <u>&nbsp; My Posts</u></h3>
+
+<div class="center">
+  <div class="row">
+    <div class="col">
+      <div *ngFor="let post of posts">
+
+        <h2 (click)="viewPostHandler(post._id)"> <u><b>{{post.title}}</b></u></h2>
+        <img src='/assets/uploads/{{post.imgURL}}' height=" 450px" width="750px" style="border: 3px solid black;;">
+        <p style="width: 100%; margin-left: 0%; font-size: 25px;text-align: justify;">{{post.body}}</p>
+        <button (click)="updateHandler(post._id)"
+          class="w3-button w3-teal">Update</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button (click)="deleteHandler(post._id)" class="w3-button w3-teal">Delete</button>
+        <hr>
+      </div>
+    </div>
+
+  </div>
